@@ -43,18 +43,3 @@ for attempt in range (10):
         break
 
 
-"""        
-
-
-
-def random_row(board):
-    return randint(0, len(board) - 1)
-
-def random_col(board):
-    return randint(0, len(board[0]) - 1)
-
-ship_row = random_row(board)
-ship_col = random_col(board)
-print (ship_row)               #delete before playing a game!
-print (ship_col)
-"""
