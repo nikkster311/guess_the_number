@@ -1,0 +1,60 @@
+name = input("What is your name?")
+print ("Hello %s. Let's play a game. Guess a number between 1 - 100. If you want to exit at any time, type 999." % name)
+
+from random import randint
+
+def random_number():
+    return randint(1, 100)
+
+random = random_number()
+print (random)                  #delete for game!
+
+for attempt in range (10):
+    attempt = 0
+    print ("Attempt number " + str(attempt))
+    guess = int(input("Guess a number:"))
+    while guess != random: 
+        if guess == 999:
+            break
+        else:
+            if (random + 3 >= guess >= random - 3):
+                print ("You're SO close!!")
+                return attempt += 1
+            elif (random + 10 >= guess >= random - 10):
+                print ("You're so warm, my socks are melting!")
+                return attempt += 1
+            elif (random + 15 >= guess >= random - 15):
+                print ("You're getting even warmer..")
+                return attempt += 1
+            elif (random + 20 >= guess >= random - 20):
+                print ("You're getting warmer..")
+                return attempt += 1
+            elif (random + 30 >= guess >= random - 30):
+                print ("brr.. it's cold in here..")
+                return attempt += 1
+            elif (guess > 100 or guess < 0):
+                print ("try a number between 1 and 100.")
+                return attempt += 1
+            else:
+                print ("iiicce cooolddd...")
+                return attempt += 1        
+    else:
+        print ("Congratulations, you got it!")
+        break
+
+
+"""        
+
+
+
+def random_row(board):
+    return randint(0, len(board) - 1)
+
+def random_col(board):
+    return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+print (ship_row)               #delete before playing a game!
+print (ship_col)
+"""
